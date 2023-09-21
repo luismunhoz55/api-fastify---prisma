@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { createUser } from './user.service'
-import { createUserInput } from "./user.schema";
+import { createUserInput, loginInput } from "./user.schema";
 
 export async function registerUserHandler(
   request: FastifyRequest<{
@@ -19,4 +19,10 @@ export async function registerUserHandler(
     console.log(e)
   }
 
+}
+
+export async function loginHandler(request: FastifyRequest<{
+  Body: loginInput
+}>, reply: FastifyReply) {
+  
 }
