@@ -1,1 +1,15 @@
-GET http://localhost:3000 
+# @name Healthcheck
+GET http://localhost:3000/healthcheck
+
+###
+
+# @name createUser
+POST http://localhost:3000/api/users
+content-type: application/json
+
+{
+  "email": "example@gmail.com",
+  "name": "luis",
+  "password": "123"
+}
+
